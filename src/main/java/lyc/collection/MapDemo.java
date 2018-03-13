@@ -11,13 +11,19 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * Map 集合
+ * @author lyc
+ *
+ */
 public class MapDemo {
 
 	public static void main(String[] args) {
-	
-		keySet();
-		valueCollection();
-		entry();
+//		keySet();
+//		valueCollection();
+//		entry();
+		int[] array = {1,3,45,2};
+		mapPaiXu(array);
 	}
 	public static void keySet() {
 		Map<String,Object> map = new HashMap<String,Object>();
@@ -56,6 +62,23 @@ public class MapDemo {
 	public static void concurrentHashMap() {
 		Map<Object,Object> map = new ConcurrentHashMap<Object,Object>();
 		map.put("1", "1");
+	}
+	/**
+	 * 倒叙排序
+	 * @param array
+	 */
+	public static void mapPaiXu(int[] array) {
+		
+		for(int min=0,max=array.length-1;min<max;min++,max--) {
+//			if(array[min]<array[max]) {
+				int temp = array[min];
+				array[min] = array[max];
+				array[max] = temp;
+//			}
+		}
+		for(int i=0;i<array.length;i++) {
+			System.out.println(array[i]);
+		}
 	}
 	
 }

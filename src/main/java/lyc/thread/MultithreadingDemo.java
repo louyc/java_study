@@ -19,7 +19,7 @@ public class MultithreadingDemo {
 	         ServerSocket serverSocket = new ServerSocket(4999);
 	         while (true) {
 	             Socket socket = serverSocket.accept();
-	             executor.execute(new ThreadDemo(socket));
+	             executor.execute(new ThreadRunnableDemo(socket));
 	         }
 	     } catch (Exception e) {
 	         e.printStackTrace();

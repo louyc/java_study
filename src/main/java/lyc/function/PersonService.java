@@ -10,7 +10,7 @@ import lyc.function.entity.Person;
 public class PersonService {
 
 	 //假设这个list是通过已有接口返回的所有Person集合
-    private List<Person> list = new ArrayList<>();
+    private List<Person> list = new ArrayList<Person>();
     
     public PersonService(List<Person> list) {
 		super();
