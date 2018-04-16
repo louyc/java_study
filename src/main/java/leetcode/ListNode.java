@@ -1,4 +1,4 @@
-package lyc.leetCode;
+package leetcode;
 
 public class ListNode {
 

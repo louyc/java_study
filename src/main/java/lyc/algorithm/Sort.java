@@ -1,4 +1,10 @@
 package lyc.algorithm;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * 排序算法
  * @author lyc
@@ -6,15 +12,6 @@ package lyc.algorithm;
  */
 public class Sort {
 
-	public static void main(String[] args) {
-		int[] sort = {6,2};
-		//				bubbleSort(sort);
-		//		middleSort(sort,0,sort.length-1);
-		insertSort(sort);
-		for(int i=0;i<sort.length;i++) {
-			System.out.print(sort[i]+" ");
-		}
-	}
 	/**
 	 * 冒泡排序
 	 * 效率低  实现简单   从小到大
@@ -114,6 +111,56 @@ public class Sort {
 				}
 				array[m+1] =t;
 			}
+		}
+	}
+
+	public static void main(String[] args) {
+		int[] sort = {0,6,2,4,8,1};
+		//				bubbleSort(sort);
+		//		middleSort(sort,0,sort.length-1);
+		Map<Object,Object> map = new HashMap<Object,Object>();
+		quickSort(sort,0,5);
+		for(int i=0;i<sort.length;i++) {
+			System.out.print(sort[i]+" ");
+		}
+	}
+	/**
+	 * 快速排序
+	 * @param a
+	 * @param start
+	 * @param end
+	 */
+	public static void quickSort(int[] a,int start,int end) {
+		//0,6,2,4,8,1
+		int i,j;
+		i = start;
+		j = end;
+		if(a==null|| a.length <=0 || i>j) {
+			return;
+		}
+		while(i<j) {
+			while(i<j && a[i]>a[j]) {  //从i开始   从左侧开始遍历  找到比a[i]大的结束 互换位置 
+				i++;
+			}
+			if(i<j) {
+				int tem = a[j];
+				a[j] = a[i];
+				a[i] = tem;
+			}
+			while(i<j && a[i]>a[j]) {  //从i开始 从右侧开始遍历 找到 比a[i]   互换位置
+				j--;
+			}
+			if(i<j) {
+				int tmp = a[i];
+				a[i] = a[j];
+				a[j] = tmp;
+			}
+		}
+		if(i-start>1) {
+			quickSort(a,start,i-1);
+		}
+		if(end - j>1) {
+			quickSort(a,j+1,end);
 		}
 	}
 
