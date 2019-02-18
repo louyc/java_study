@@ -6,7 +6,6 @@ public class GetProduce implements Runnable{
     public GetProduce(BlockOperator bq){  
         this.bq=bq;  
     }  
-    @Override  
     public void run() {  
          try {  
              //搬运工是有多少搬多少  

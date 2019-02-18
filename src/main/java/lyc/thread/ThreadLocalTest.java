@@ -6,7 +6,6 @@ public class ThreadLocalTest implements Runnable{
 
 	ThreadLocal<Studen> studenThreadLocal = new ThreadLocal<Studen>();
 
-	@Override
 	public void run() {
 		String currentThreadName = Thread.currentThread().getName();
 		System.out.println(currentThreadName + " is running...");

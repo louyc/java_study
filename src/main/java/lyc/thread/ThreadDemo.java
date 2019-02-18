@@ -4,7 +4,6 @@ public class ThreadDemo{
 
 
 	static class ThreadDemo1 implements Runnable{
-		@Override
 		public void run() {
 			String name = Thread.currentThread().getName();
 			for(int i=0;i<5;i++) {
@@ -19,7 +18,6 @@ public class ThreadDemo{
 		}
 	}
 	static class ThreadDemo2 implements Runnable{
-		@Override
 		public void run() {
 			String name = Thread.currentThread().getName();
 			for(int i=0;i<5;i++) {
@@ -34,7 +32,6 @@ public class ThreadDemo{
 		}
 	}
 	static class ThreadDemo3 implements Runnable{
-		@Override
 		public void run() {
 			String name = Thread.currentThread().getName();
 			for(int i=0;i<5;i++) {

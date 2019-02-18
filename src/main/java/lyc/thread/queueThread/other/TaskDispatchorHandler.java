@@ -31,7 +31,6 @@ public class TaskDispatchorHandler implements Runnable{
 	public void stop(boolean b) {
 		this.threadRunning = b;
 	}
-	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		while(threadRunning) {

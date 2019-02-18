@@ -18,7 +18,6 @@ public class CallableDemo implements Callable<Object>{
 		this.taskNum = taskNum;
 	}
 	
-	@Override
 	public Object call() throws Exception {
 		// TODO Auto-generated method stub
 		System.out.println("任务开始");

@@ -7,7 +7,6 @@ public class CreateProduce implements Runnable{
 		this.bq=bq;  
 	}  
 
-	@Override  
 	public void run() {  
 		//生产n个产品  
 		for(int i=0;i<5;i++){  
