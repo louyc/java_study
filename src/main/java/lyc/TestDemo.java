@@ -33,7 +33,7 @@ public class TestDemo {
 			if(i=="2") {
 				list.remove(i);
 			}
-			System.out.println(i);
+			System.out.println(i+"aaa");
 		}
 		for(String i: list) {
 			System.out.println(i);
